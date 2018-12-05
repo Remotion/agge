@@ -32,7 +32,7 @@ namespace demo
 				agge::fill(surface, area, solid_color_brush(color::make(0, 50, 100)));
 			timings.clearing += stopwatch(counter);
 
-			_ddx += 0.02f;
+			//? _ddx += 0.02f;
 
 			_rasterizer.reset();
 

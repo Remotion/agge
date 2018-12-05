@@ -80,7 +80,7 @@ namespace agge
 			return i->second.lock();
 
 		garbage_container::const_iterator gi = _garbage.find(key);
-		auto_ptr<font> pre_f;
+		std::unique_ptr<font> pre_f;
 
 		if (_garbage.end() != gi)
 		{
@@ -93,7 +93,11 @@ namespace agge
 			pre_f.reset(new font(acc.first, acc.second));
 		}
 
-		font::ptr f(pre_f.get(), bind(&text_engine_base::on_released, this, &*i, _1));
+		//? auto bf = bind(&text_engine_base::on_released, this, &*i, _1);
+		//? font::ptr f(pre_f.get(), bf );
+
+		auto lf = [=](font *font) { this->on_released(&*i, font); };
+		font::ptr f(pre_f.get(), lf );
 
 		pre_f.release();
 		i->second = f;

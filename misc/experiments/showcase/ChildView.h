@@ -10,6 +10,7 @@
 #include <atlbase.h>
 #include <vector>
 #include <utility>
+#include <memory>
 #include <d2d1.h>
 
 struct bar
@@ -54,7 +55,7 @@ class CChildView : public CWnd
 	std::vector<bar> _bars[30];
 	std::vector<ellipse_t> _ellipses;
 
-	std::auto_ptr<Gdiplus::GraphicsPath> _gdip_path;
+	std::unique_ptr<Gdiplus::GraphicsPath> _gdip_path;
 	CComPtr<ID2D1PathGeometry> _d2d_path;
 	AggPath _agg_path;
 	AggPath _agg_path_flatten;

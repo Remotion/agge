@@ -28,6 +28,8 @@ namespace
 			ras.line_to(20.0f, 130.0f);
 			ras.close_polygon();
 
+			// ras.line(0,0,0,0);
+
 			ras.sort();
 
 			fill(surface, mkrect<int>(0, 0, surface.width(), surface.height()),

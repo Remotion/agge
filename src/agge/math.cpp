@@ -1,6 +1,6 @@
 #include <agge/math.h>
 
-#include <math.h>
+#include <cmath>
 
 namespace agge
 {
@@ -14,8 +14,6 @@ namespace agge
 
 
 	const real_t distance_epsilon = limits<real_t>::resolution();
-	const real_t pi = real_t(3.14159265359);
-
 
 	float sqrt(float x)
 	{	return ::sqrtf(x);	}

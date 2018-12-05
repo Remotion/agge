@@ -5,7 +5,7 @@
 namespace agge
 {
 	extern const real_t distance_epsilon;
-	extern const real_t pi;
+	constexpr real_t pi = 3.14159265358979323846f;
 
 	template <typename T>
 	struct limits

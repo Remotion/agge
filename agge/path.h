@@ -4,6 +4,9 @@
 
 namespace agge
 {
+
+
+
 	enum path_commands {
 		path_command_stop = 0x00,
 		path_command_move_to = 0x01,

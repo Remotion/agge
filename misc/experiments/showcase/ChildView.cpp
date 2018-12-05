@@ -20,8 +20,8 @@ using namespace std;
 using namespace Gdiplus;
 using namespace common;
 
-class __declspec(uuid("ec5ec8a9-c395-4314-9c77-54d7a935ff70")) _IWICImagingFactory;
-extern "C" const IID IID_IWICImagingFactory = __uuidof(_IWICImagingFactory);
+//? class __declspec(uuid("ec5ec8a9-c395-4314-9c77-54d7a935ff70")) _IWICImagingFactory;
+//? extern "C" const IID IID_IWICImagingFactory = __uuidof(_IWICImagingFactory);
 
 namespace common
 {
